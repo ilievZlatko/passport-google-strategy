@@ -47,6 +47,12 @@
                 padding: 0 10px;
                 color: #333;
             }
+
+            main img {
+                border-radius: 50%;
+                border: 2px solid #fff;
+                box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+            }
         </style>
     </head>
 
@@ -67,11 +73,13 @@
             </ul>
         </nav>
         <header>
-            <h1>Net Ninja OAuth Tut's</h1>
-            <h2>Homepage</h2>
+            <h1>Welcome to your profile,
+                <%= user.username %>
+            </h1>
         </header>
         <main>
-            <p>Probably the best OAuth tutorials on the planet :)</p>
+            <img src="<%= user.thumbnail %>">
+            <p>This is your profile thumbnail</p>
         </main>
     </body>
 
